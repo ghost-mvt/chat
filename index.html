@@ -1,15 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Face detection on the browser using javascript !</title>
-  <script defer src="face-api.min.js"></script>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عرض معلومات من Realtime Database</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <video id="video" width="600" height="450" autoplay>
+
+<div class="container">
+  <div id="loginForm">
+    <!-- نموذج تسجيل الدخول -->
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="keysDisplay"></div>
+  <div class="column" id="dataDisplay">
+    <!-- هنا ستظهر التفاصيل -->
+  </div>
+  <div id="mediaBox"></div> <!-- صندوق جديد للصور والفيديوهات -->
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
