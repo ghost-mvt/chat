@@ -29,17 +29,47 @@ h2 {
     text-align: center;
 }
 
-input[type="email"],
-input[type="password"],
-button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
+  }
+
+        input[type="email"],
+
+        input[type="password"],
+
+        button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-bottom: 10px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+
+            box-sizing: border-box;
+
+            font-size: 16px;
+
+        }
+
+        button {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
 
 .column {
     max-width: 100%;
