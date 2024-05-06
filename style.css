@@ -7,28 +7,28 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f9f9f9;
+  }
+ 
+  .container {
+  width: 100%;
+  
+  height: 300px; /* لجعل العنصر متوسط الارتفاع على الشاشة بغض النظر عن الحجم */
 }
 
-.container {
-    width: 100%;
-    height: 300px; /* لجعل العنصر متوسط الارتفاع على الشاشة بغض النظر عن الحجم */
-}
-
-h2 {
+ 
+  h2 {
     text-align: center;
     color: #333;
-}
-
-#keysDisplay {
+  }
+  #keysDisplay {
     margin-bottom: 20px;
-}
-
-#loginForm h2 {
+  }
+  
+  #loginForm h2 {
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
-}
-
+    text-align: center;
   }
 
         input[type="email"],
@@ -71,15 +71,17 @@ h2 {
 
         }
 
-.column {
+      
+
+  
+  .column {
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
-}
-
-.keyElement {
+  }
+  .keyElement {
     padding: 15px;
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -87,29 +89,24 @@ h2 {
     transition: background-color 0.3s ease;
     text-align: center;
     line-height: 1.4;
-}
-
-.keyElement:hover {
+  }
+  .keyElement:hover {
     background-color: #e0e0e0;
-}
-
-#dataDisplay {
+  }
+  #dataDisplay {
     flex: 1;
     padding: 20px;
     background-color: #fafafa;
     border-radius: 8px;
-}
-
-ul {
+  }
+  ul {
     list-style-type: none;
     padding: 0;
-}
-
-li {
+  }
+  li {
     margin-bottom: 5px;
-}
-
-#mediaBox {
+  }
+  #mediaBox {
     max-width: 100vh;
     height: 300px;
     background-color: #fff;
@@ -118,19 +115,20 @@ li {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#mediaBox img, #mediaBox video {
+  }
+  #mediaBox img, #mediaBox video {
     height: 150px;
     margin-bottom: 10px;
-    
-}
-
-  img {
-  border: 2px solid #fff; /* عرض الإطار ولونه */
-  border-radius: 1px; /* إضافة حواف مستديرة للإطار */
   }
+  img {
 
-#loginForm {
+  border: 2px solid #fff; /* عرض الإطار ولونه */
+
+  border-radius: 1px; /* إضافة حواف مستديرة للإطار */
+
+  }
+  
+  
+  #loginForm {
     display: none; /* يخفي النموذج في البداية */
-}
+  }
