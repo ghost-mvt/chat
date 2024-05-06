@@ -128,7 +128,7 @@ li {
 
   img {
   border: 2px solid #fff; /* عرض الإطار ولونه */
-  border-radius: 5px; /* إضافة حواف مستديرة للإطار */
+  border-radius: 1px; /* إضافة حواف مستديرة للإطار */
   }
 
 #loginForm {
