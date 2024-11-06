@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "عرض الصفحات المفتوحة",
+  "version": "1.0",
+  "description": "امتداد لعرض جميع الصفحات المفتوحة في المتصفح",
+  "permissions": ["tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
