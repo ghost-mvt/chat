@@ -1,33 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>عرض معلومات من Realtime Database</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض الصفحات المفتوحة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            direction: rtl;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            font-size: 1.5em;
+            text-align: center;
+            color: #333;
+        }
+        #tabs-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #tabs-list li {
+            padding: 5px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+        #tabs-list li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        #tabs-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <h1>الصفحات المفتوحة</h1>
+    <ul id="tabs-list"></ul>
 
-<div class="container">
-  <div id="loginForm">
-    <!-- نموذج تسجيل الدخول -->
-    <h2>Login</h2>
-    <input type="email" id="email" placeholder="Email">
-    <input type="password" id="password" placeholder="Password">
-    <button onclick="login()">Login</button>
-  </div>
-
-  <div id="keysDisplay"></div>
-  <div class="column" id="dataDisplay">
-    <!-- هنا ستظهر التفاصيل -->
-  </div>
-  <div id="mediaBox"></div> <!-- صندوق جديد للصور والفيديوهات -->
-</div>
-
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
-<script src="app.js"></script>
+    <script>
+        // استعلام للحصول على جميع التبويبات المفتوحة
+        chrome.tabs.query({}, function(tabs) {
+            const tabsList = document.getElementById("tabs-list");
+            // إذا كانت هناك تبويبات مفتوحة
+            if (tabs.length === 0) {
+                const noTabsItem = document.createElement("li");
+                noTabsItem.textContent = "لا توجد تبويبات مفتوحة.";
+                tabsList.appendChild(noTabsItem);
+            } else {
+                // عرض جميع التبويبات المفتوحة
+                tabs.forEach(tab => {
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `<a href="${tab.url}" target="_blank">${tab.title}</a>`;
+                    tabsList.appendChild(listItem);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
